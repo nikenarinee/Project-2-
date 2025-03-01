@@ -13,31 +13,24 @@ header {
 }
 
 .cart {
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 15px;
     right: 20px;
     font-size: 18px;
-    background: #ff66b2; /* เพิ่มพื้นหลังให้มองเห็นชัดขึ้น */
-    color: white; /* เปลี่ยนสีตัวอักษรเป็นขาว */
-    padding: 10px; /* เพิ่มระยะห่างขอบด้านใน */
-    border-radius: 5px; /* ทำขอบมน */
 }
 
 .products {
     display: flex;
-    flex-direction: row ;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
 
 .product {
-    width: 200px;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 10px;
-    text-align: center;
+    max-width: 250px;
 }
 
 .product img {
