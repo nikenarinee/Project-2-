@@ -13,10 +13,14 @@ header {
 }
 
 .cart {
-    position: absolute;
-    top: 15px;
+    position: fixed;
+    top: 10px;
     right: 20px;
     font-size: 18px;
+    background: #ff66b2; /* เพิ่มพื้นหลังให้มองเห็นชัดขึ้น */
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นขาว */
+    padding: 10px; /* เพิ่มระยะห่างขอบด้านใน */
+    border-radius: 5px; /* ทำขอบมน */
 }
 
 .products {
