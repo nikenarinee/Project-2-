@@ -1,0 +1,49 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Cart Items</h2>
+        <div id="cart-items"></div>
+        <a href="checkout.html"><button>Proceed to Checkout</button></a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shopping Site</p>
+    </footer>
+
+    <script>
+        // Retrieve cart items from localStorage and display them
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length > 0) {
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `Product: ${item.name}, Price: $${item.price}`;
+                cartItemsDiv.appendChild(itemElement);
+            });
+        } else {
+            cartItemsDiv.textContent = 'Your cart is empty.';
+        }
+    </script>
+</body>
+</html>
+
