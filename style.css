@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #ff66b2;
+    background: #C0AFE2;
     color: white;
     padding: 15px;
     font-size: 30px;
@@ -34,12 +34,12 @@ header {
 }
 
 .product img {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
 }
 
 button {
-    background: #ff66b2;
+    background: #9379C2;
     color: white;
     border: none;
     padding: 10px;
