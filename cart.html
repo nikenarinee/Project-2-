@@ -1,49 +1,71 @@
-<!-- cart.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="style.css">
+    <title>หน้าตระกร้าสินค้า</title>
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .item-details {
+            flex-grow: 1;
+        }
+        .item-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .item-details p {
+            margin: 5px 0;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Shopping Cart</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>ตระกร้าสินค้า</h1>
 
-    <main>
-        <h2>Your Cart Items</h2>
-        <div id="cart-items"></div>
-        <a href="checkout.html"><button>Proceed to Checkout</button></a>
-    </main>
+    <!-- ตัวอย่างสินค้าในตระกร้า -->
+    <div class="cart-item">
+        <img src="path-to-product-image.jpg" alt="ชื่อสินค้า">
+        <div class="item-details">
+            <h3>ชื่อสินค้า 1</h3>
+            <p>จำนวน: 2</p>
+            <p>ราคา: ฿500</p>
+        </div>
+        <button class="remove-btn">ลบ</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Shopping Site</p>
-    </footer>
+    <div class="cart-item">
+        <img src="path-to-another-product-image.jpg" alt="ชื่อสินค้า">
+        <div class="item-details">
+            <h3>ชื่อสินค้า 2</h3>
+            <p>จำนวน: 1</p>
+            <p>ราคา: ฿300</p>
+        </div>
+        <button class="remove-btn">ลบ</button>
+    </div>
 
-    <script>
-        // Retrieve cart items from localStorage and display them
-        const cartItemsDiv = document.getElementById('cart-items');
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        if (cart.length > 0) {
-            cart.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.textContent = `Product: ${item.name}, Price: $${item.price}`;
-                cartItemsDiv.appendChild(itemElement);
-            });
-        } else {
-            cartItemsDiv.textContent = 'Your cart is empty.';
-        }
-    </script>
+    <!-- ตระกร้ารวมทั้งหมด -->
+    <div>
+        <h3>ยอดรวม: ฿800</h3>
+        <button>ดำเนินการชำระเงิน</button>
+    </div>
 </body>
 </html>
-
