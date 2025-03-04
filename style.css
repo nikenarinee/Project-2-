@@ -13,7 +13,7 @@ header {
 }
 
 .cart {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 50px;
     font-size: 100px;
@@ -25,13 +25,15 @@ header {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างสินค้า */
 }
 
 .product {
-    padding: 100px;
+    padding: 40px;
     border-radius: 10px;
-    max-width: 1500px;
-
+    max-width: 1200px; /* จำกัดขนาดสูงสุด */
+    margin: 0 15px; /* เพิ่ม margin ซ้ายขวา */
+    box-sizing: border-box; /* รวม padding เข้ากับขนาด */
 }
 
 button {
@@ -40,6 +42,7 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px; /* เพิ่มมุมโค้งให้ปุ่ม */
 }
 
 button:hover {
@@ -47,27 +50,28 @@ button:hover {
 }
 
 h2 {
-    font-size: 24px; 
-    font-weight: bold; 
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .product h2 {
-    font-size: 45px; 
-    font-family: 'Arial', sans-serif; 
-    font-weight: bold; 
-}
-.product-item p {
-    font-size: 28px;
-    font-weight: bold; 
-    color: #333; 
+    font-size: 45px;
     font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
 
+.product-item p {
+    font-size: 24px; /* ขนาดเล็กลงนิดหน่อย */
+    font-weight: bold;
+    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
 .add-to-cart {
-    font-size: 28px; 
-    font-weight: bold; 
+    font-size: 28px;
+    font-weight: bold;
 }
+
 
 
 
