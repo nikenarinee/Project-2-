@@ -1,63 +1,37 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Shopping Site - Home</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
     <header>
-        <h1>Shop</h1>
+        <h1>Welcome to Our Online Store</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Shop</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Products</h2>
+        <p>Explore our great collection of products.</p>
+    </main>
+    <main>
+        <h2></h2>
         <div class="product-list">
             <!-- Product 1 -->
             <div class="product-item">
-                <img src="https://s2.konvy.com/static/team/2024/1104/2024110414543944459.jpg" width="300" height="300">
-                <p>JANUA EAU DE PARFUM #Kiss Me More - $20</p>
-                <button class="add-to-cart" onclick="addToCart('JANUA EAU DE PARFUM #Kiss Me More', 20)">Add to Cart</button>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-item">
-                <img src="https://down-th.img.susercontent.com/file/th-11134207-7r98t-lvsohzlwb8aif5.webp" width="300" height="300">
-                <p>JANUA EAU DE PARFUM #Passion Love - $30</p>
-                <button class="add-to-cart" onclick="addToCart('JANUA EAU DE PARFUM #Passion Love', 30)">Add to Cart</button>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-item">
-                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lx4a8lmqr1llc9" width="300" height="300">
-                <p>JANUA EAU DE PARFUM #Mine Wish - $40</p>
-                <button class="add-to-cart" onclick="addToCart('JANUA EAU DE PARFUM #Mine Wish', 40)">Add to Cart</button>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-item">
-                <img src="https://down-th.img.susercontent.com/file/th-11134207-7r98q-lvsoogh7huu531" width="300" height="300">
-                <p>JANUA EAU DE PARFUM #Dreamy Cloud - $40</p>
-                <button class="add-to-cart" onclick="addToCart('JANUA EAU DE PARFUM #Dreamy Cloud', 40)">Add to Cart</button>
-            </div>
-        </div>
-    </main>
-
+                <img src="https://down-th.img.susercontent.com/file/th-11134207-7r98r-lvdm5y6kjyd6d2.jpg"width="800" height="800">
     <footer>
         <p>&copy; 2025 Shopping Site</p>
     </footer>
-
-    <script>
-        function addToCart(name, price) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push({ name, price });
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} has been added to your cart.`);
-        }
-    </script>
 </body>
 </html>
