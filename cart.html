@@ -1,70 +1,49 @@
+<!-- cart.html -->
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าตระกร้าสินค้า</title>
-    <style>
-        .cart-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .cart-item img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
-        .item-details {
-            flex-grow: 1;
-        }
-        .item-details h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .item-details p {
-            margin: 5px 0;
-        }
-        .remove-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cart</h1>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Cart -->
-    <div class="cart-item">
-        <img src="https://s2.konvy.com/static/team/2024/1104/2024110414543944459.jpg"width="300" height="300">
-        <div class="item-details">
-            <h3>JANUA EAU DE PARFUM #Kiss Me More 2</h3>
-            <p>จำนวน: 1</p>
-            <p>ราคา: $20</p>
-        </div>
-        <button class="remove-btn">ลบ</button>
-    </div>
+    <main>
+        <h2>Your Cart Items</h2>
+        <div id="cart-items"></div>
+        <a href="checkout.html"><button>Proceed to Checkout</button></a>
+    </main>
 
-    <div class="cart-item">
-        <img src="https://down-th.img.susercontent.com/file/th-11134207-7r98t-lvsohzlwb8aif5.webp"width="300" height="300">
-            <h3>JANUA EAU DE PARFUM #Passion Love 2</h3>
-            <p>จำนวน: 1</p>
-            <p>ราคา: $30</p>
-        </div>
-        <button class="remove-btn">ลบ</button>
-    </div>
+    <footer>
+        <p>&copy; 2025 Shopping Site</p>
+    </footer>
 
-    <!-- Cart -->
-    <div>
-        <h3>ยอดรวม:$50 </h3>
-        <button>ดำเนินการชำระเงิน</button>
-    </div>
+    <script>
+        // Retrieve cart items from localStorage and display them
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length > 0) {
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `Product: ${item.name}, Price: $${item.price}`;
+                cartItemsDiv.appendChild(itemElement);
+            });
+        } else {
+            cartItemsDiv.textContent = 'Your cart is empty.';
+        }
+    </script>
 </body>
 </html>
+
