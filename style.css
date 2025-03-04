@@ -38,8 +38,8 @@ header {
 
 button {
     background: #9379C2;
-    color: white;
-    border: none;
+    color: rgb(210, 163, 220);
+    border: 2;
     padding: 10px;
     cursor: pointer;
     border-radius: 20px; /* เพิ่มมุมโค้งให้ปุ่ม */
