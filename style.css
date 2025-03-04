@@ -34,8 +34,8 @@ header {
 }
 
 .product img {
-    width: 50%;
-    border-radius: 10px;
+    width: 25%;
+    border-radius: 5px;
 }
 
 button {
