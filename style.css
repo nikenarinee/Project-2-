@@ -42,7 +42,7 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px; /* เพิ่มมุมโค้งให้ปุ่ม */
+    border-radius: 20px; /* เพิ่มมุมโค้งให้ปุ่ม */
 }
 
 button:hover {
