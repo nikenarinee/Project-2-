@@ -25,7 +25,7 @@ header {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    gap: 20px; /* เพิ่มระยะห่างระหว่างสินค้า */
+    gap: 25px; /* เพิ่มระยะห่างระหว่างสินค้า */
 }
 
 .product {
