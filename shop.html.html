@@ -1,0 +1,99 @@
+<!-- shop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Products</h2>
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <img src="images/49f1d8f01919232f.png" alt="JANUA EAU DE PARFUM #Kiss Me More 30 ml.">
+                <p>Product 1 - $20</p>
+                <button class="add-to-cart" onclick="addToCart('Product 1', 20)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\Miss Dior.jpg" alt="Miss Dior">
+                <p>Product 2 - $30</p>
+                <button class="add-to-cart" onclick="addToCart('Product 2', 30)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\chanel.jpg" alt="chanel">
+                <p>Product 3 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 3', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\Dior bunny bag.jpg" alt="Dior bunny bag">
+                <p>Product 4 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 4', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\Dior Bag.jpg" alt="Dior Bag">
+                <p>Product 5 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 5', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\SERAFINA.jpg" alt="SERAFINA">
+                <p>Product 6 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 6', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\cherry vibee.jpg" alt="cherry vibee">
+                <p>Product 7 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 7', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\Kesia Ivory Mini Dress.jpg" alt="Kesia Ivory Mini Dress">
+                <p>Product 8 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 8', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\Twirl Skirt Beige.jpg" alt="Twirl Skirt Beige">
+                <p>Product 9 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 9', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\BULGARI SERPENTI VIPER NECKLACE.jpg" alt="BULGARI SERPENTI VIPER NECKLACE">
+                <p>Product 10 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 10', 40)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="C:\Users\nice_\Downloads\pandora charm bracelet.jpg" alt="pandora charm bracelet">
+                <p>Product 11 - $40</p>
+                <button class="add-to-cart" onclick="addToCart('Product 11', 40)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shopping Site</p>
+    </footer>
+
+    <script>
+        // Function to add products to the cart and store it in localStorage
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart.`);
+        }
+    </script>
+</body>
+</html>
